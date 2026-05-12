@@ -1,0 +1,1 @@
+public record ServiceOrder(String clientName, double hours, double hourRate) {}
