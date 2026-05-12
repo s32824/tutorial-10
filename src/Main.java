@@ -21,5 +21,19 @@ public class Main {
         System.out.println(calculator.calculate(order, standard));
         System.out.println(calculator.calculate(order, discount));
         System.out.println(calculator.calculate(order, weekend));
+
+        //exrecise 3
+        Order orde = new Order("ORD-100", "Anna Kowalska");
+
+        orde.addItem(new Order.OrderItem("Keyboard", 249.99, 1));
+        orde.addItem(new Order.OrderItem("Mouse", 99.99, 2));
+
+        OrderSummary summary = new OrderSummary(
+                orde.getOrderNumber(),
+                orde.getCustomerName(),
+                orde.total()
+        );
+
+        System.out.println(summary);
     }
 }
