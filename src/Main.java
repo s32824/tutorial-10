@@ -35,5 +35,14 @@ public class Main {
         );
 
         System.out.println(summary);
+
+        //exercise 4
+        LibraryAccount account = new LibraryAccount("John Smith", 3, 5);
+        LibraryAccount.FineCalculator calculating = account.new FineCalculator();
+
+        double fine = calculating.calculate();
+
+        MessagePrinter printer = message -> System.out.println("[LIBRARY] " + message);
+        printer.print("Reader: " + account.getReaderName() + ", fine: " + fine + " PLN");
     }
 }
